@@ -16,7 +16,7 @@ npm install @koshnic/ratelimit
 
 ```javascript
 const Redis = require("ioredis");
-const RateLimiter = require("ratelimit");
+const {RateLimiter} = require('@koshnic/ratelimit');
 
 const redis = new Redis({
     host: 'localhost',

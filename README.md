@@ -14,6 +14,9 @@ npm install @koshnic/ratelimit
 
 # Usage
 
+**Note**: All rate limit keys stored in Redis will be prefixed with `rate_limit:`.
+For example, when you invoke `limiter.allowPerSecond('project:123', 10)`, the corresponding key name in Redis will be `rate_limit:project:123`.
+
 ```javascript
 const Redis = require("ioredis");
 const {RateLimiter} = require('@koshnic/ratelimit');

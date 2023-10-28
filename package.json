@@ -1,6 +1,6 @@
 {
   "name": "@koshnic/ratelimit",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Redis based rate limiting implementation using the token bucket algorithm.",
   "main": "dist/rate.js",
   "files": [
@@ -8,6 +8,7 @@
     "README.md",
     "LICENSE"
   ],
+  "types": "./dist/rate.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "mocha --require ts-node/register rate.spec.ts"

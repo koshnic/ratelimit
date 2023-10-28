@@ -1,3 +1,4 @@
+import Redis from 'ioredis';
 export interface Rate {
     /**
      * The maximum number of requests allowed to burst at once.
@@ -14,7 +15,6 @@ export interface Rate {
      * you would set ratePerPeriod to 10 and period to 60.
      */
     period: number;
-
     /**
      * Number of tokens a request costs. This allows for weighted requests.
      * When cost is 1, the `allowed` value in the result will only be 0 or 1.
@@ -23,7 +23,6 @@ export interface Rate {
      */
     cost: number;
 }
-
 export interface AllowResult {
     /**
      * The number of requests that are allowed at this time.
@@ -45,4 +44,14 @@ export interface AllowResult {
      * This is a timestamp in seconds.
      */
     resetAfter: number;
+}
+export declare class RateLimiter {
+    private redis;
+    private scriptSha;
+    constructor(redisClient: Redis);
+    init(): Promise<void>;
+    allow(key: string, rate: Rate): Promise<AllowResult>;
+    allowPerSecond(key: string, rate: number, seconds?: number): Promise<AllowResult>;
+    allowPerMinute(key: string, rate: number, minutes?: number): Promise<AllowResult>;
+    allowPerHour(key: string, rate: number, hours?: number): Promise<AllowResult>;
 }

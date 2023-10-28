@@ -1,0 +1,45 @@
+{
+  "name": "@koshnic/ratelimit",
+  "version": "1.0.1",
+  "description": "Redis based rate limiting implementation using the token bucket algorithm.",
+  "main": "dist/rate.js",
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "mocha --require ts-node/register rate.spec.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koshnic/ratelimit.git"
+  },
+  "keywords": [
+    "ratelimit",
+    "rate-limit",
+    "rate",
+    "token-bucket",
+    "ioredis"
+  ],
+  "author": "HenryHe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/koshnic/ratelimit/issues"
+  },
+  "homepage": "https://github.com/koshnic/ratelimit#readme",
+  "devDependencies": {
+    "@types/ioredis": "^5.0.0",
+    "@types/node": "^20.8.9",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "@types/chai": "^4.3.9",
+    "@types/mocha": "^10.0.3",
+    "chai": "^4.3.10",
+    "ioredis": "^5.3.2",
+    "mocha": "^10.2.0"
+  }
+}

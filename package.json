@@ -22,7 +22,9 @@
     "rate-limit",
     "rate",
     "token-bucket",
-    "ioredis"
+    "tokenbucket",
+    "ioredis",
+    "redis"
   ],
   "author": "HenryHe",
   "license": "MIT",

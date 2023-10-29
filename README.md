@@ -65,7 +65,7 @@ res = await limiter.allowPerMinute('project:456', 20);
 res = await limiter.allowPerHour('project:789', 30);
 
 // Or you want to use raw allow function to meet your custom logic.
-res = await limiter.allow('project:cutom_login', {
+res = await limiter.allow('project:cutom_logic', {
     burst: 10,
     ratePerPeriod: 10,
     period: 60,

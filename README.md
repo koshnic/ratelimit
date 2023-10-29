@@ -1,4 +1,4 @@
-# Redis limiting for ioredis
+# Rate limit for ioredis
 
 Redis-based rate limiting using the token bucket algorithm.
 

@@ -4,8 +4,6 @@ Redis-based rate limiting using the token bucket algorithm.
 
 This project is an adaptation for Node.js, inspired by [go-redis](https://github.com/go-redis/redis_rate).
 
-Enjoy the benefits of the token bucket algorithm for both JavaScript and TypeScript developers.
-
 # Installation
 
 ```shell

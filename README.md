@@ -13,7 +13,7 @@ This project is an adaptation for Node.js, inspired by [go-redis](https://github
 
 - **Adopted from Proven Practices**
 
-  The Lua script utilized is a mature practice from the go-redis ecosystem. We act as porters of the script and provide a nodejs wrapper for it, ensuring both efficiency and ease of use.
+  The Lua script utilized is a mature practice from the [go-redis](https://github.com/go-redis/redis_rate) ecosystem. We act as porters of the script and provide a nodejs wrapper for it, ensuring both efficiency and ease of use.
 
 - **Scalability**
 

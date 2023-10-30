@@ -11,6 +11,10 @@ This project is an adaptation for Node.js, inspired by [go-redis](https://github
   Integrate with just two lines of code. The library's design allows for tailored usage to best fit your application's
   needs.
 
+- **Adopted from Proven Practices**
+
+  The Lua script utilized is a mature practice from the go-redis ecosystem. We act as porters of the script and provide a nodejs wrapper for it, ensuring both efficiency and ease of use.
+
 - **Scalability**
 
   Being Redis-based, ratelimit is inherently scalable. Whether you're handling hundreds or millions of requests, the
